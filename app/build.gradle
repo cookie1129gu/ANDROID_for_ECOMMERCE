@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.androidforecommerce"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.cjj.materialrefeshlayout:library:1.3.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.zhy:okhttputils:2.6.2'
+
+
+
+    implementation 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
+    implementation 'com.squareup.okhttp3:okhttp:3.3.1'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    implementation('com.alibaba.android:vlayout:1.2.8@aar') {
+        transitive = true
+    }
+}

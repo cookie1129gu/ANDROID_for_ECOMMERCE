@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CartFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00BCD4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="购物车"
+            android:textSize="24sp" />"
+            android:textColor="@color/colorWhite"
+        android:textSize="@dimen/big_fond" />
+
+        <TextView
+            android:id="@+id/edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="合计:"
+            android:textColor="#455A64"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/btn_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#00BCD4"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="结算"
+            android:textColor="#455A64"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <com.cjj.MaterialRefreshLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottomBar"
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:overlay="false"
+        app:isLoadMore="true"
+        app:wave_show="false"
+        app:wave_height_type="higher"
+        app:progress_show_circle_backgroud="false">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cart_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </com.cjj.MaterialRefreshLayout>
+</RelativeLayout>
